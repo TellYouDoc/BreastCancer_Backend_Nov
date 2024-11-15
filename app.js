@@ -60,6 +60,14 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
     res.send("<h1>welcome to BreastCancer</h1>");
 });
+app.get("/api/v1/jsondata", (req, res) => {
+    res.json({
+        "Name": "Koushik",
+        "age": 34,
+        "add": "somthing"
+    });
+});
+
 // Doctor Routes declearations
 app.use("/api/v1/doctor", doctorRouter);//updated
 //auth route(both):
